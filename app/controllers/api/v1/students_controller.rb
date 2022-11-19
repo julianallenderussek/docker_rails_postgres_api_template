@@ -14,7 +14,6 @@ class Api::V1::StudentsController < ApplicationController
     end
 
     def show
-        #debugger 
         @student = Student.find(params[:id])
         render(json: @student, status: :ok)
     end
