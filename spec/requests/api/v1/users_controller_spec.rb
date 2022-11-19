@@ -1,6 +1,12 @@
 # frozen_string_literal: true
-
 require "rails_helper"
+
+headers = {
+  'Content-Type':'application/json',
+  'X-Platform': '',
+  'Accept': 'application/vnd.dai_musica.v1+json',
+  'Access-Control-Allow-Origin': '*'
+ }
 
 RSpec.describe(Api::V1::UsersController, type: :request) do
 #   let(:superadmin) { create(:authenticated_user) }
@@ -16,8 +22,8 @@ RSpec.describe(Api::V1::UsersController, type: :request) do
       get "/users", headers: headers
     end
     it "returns http success" do 
-      pp response
       expect(response).to(have_http_status(:success))
+      expect(JSON.parse(response.body)["success"]).to be(true)
     end
   end
  end

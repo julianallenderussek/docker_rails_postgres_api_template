@@ -1,16 +1,15 @@
 class Api::V1::StudentsController < ApplicationController
     def index
         @students = Student.all
-        render(json: @students, status: :ok)
-        #render(json: { message: "Si jala la ruta" }, status: :ok)
-    end
+        render(json: {data: {students: @students}, error: false, success: true}, status: :ok)
+   end
 
     def create 
         student = Student.create!(student_params)
         if student
-            render(json: student, status: :created)
+            render(json: {data: { student: @student}, error: false, success: true}, status: :ok)
         else 
-            render(json: { message: student.errors.message } , status: :bad_request)
+            render(json: {data: null, error: false, success: false}, status: :404)
         end
     end
 

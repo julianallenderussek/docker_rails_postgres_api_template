@@ -1,12 +1,10 @@
 class Api::V1::UsersController < ApplicationController
     def index
         @users = User.all
-        render(json: {users: @users, mesasage: "Si jala esto"}, status: :ok)
-        #render(json: { message: "Si jala la ruta" }, status: :ok)
+        render(json: {users: @users, error: false, success: true}, status: :ok)
     end
 
     def create 
-        #@user = User.create(first_name: params[:first_name] ,last_name: paramas[:last_name], email: params[:email], password: params[:password])
         @user = User.create(user_params)
 
         if @user
