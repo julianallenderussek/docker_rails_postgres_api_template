@@ -3,12 +3,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   #root "articles#index"
-
-
   scope module: :api do
     scope module: :v1, constraints: ApiVersionConstraint.new(version: 1) do 
       resources :users
-      resource :students
+      resources :students
+      resources :api_keys
     end 
   end
 end

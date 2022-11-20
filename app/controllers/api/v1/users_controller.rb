@@ -1,7 +1,7 @@
 class Api::V1::UsersController < ApplicationController
     def index
         @users = User.all
-        render(json: {users: @users, error: false, success: true}, status: :ok)
+        render(json: {data: {users: @users}, error: false, success: true}, status: :ok)
     end
 
     def create 
