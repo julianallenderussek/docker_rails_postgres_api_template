@@ -78,6 +78,10 @@ GEM
     crass (1.0.6)
     destruct (0.0.0)
     diff-lcs (1.5.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.11.0)
     factory_bot (6.2.1)
       activesupport (>= 5.0.0)
@@ -204,6 +208,7 @@ DEPENDENCIES
   byebug
   carrierwave (~> 1.0)
   destruct
+  dotenv-rails
   factory_bot_rails
   faker
   listen (~> 3.3)
@@ -222,4 +227,4 @@ RUBY VERSION
    ruby 2.7.3p183
 
 BUNDLED WITH
-   2.3.24
+   2.3.26

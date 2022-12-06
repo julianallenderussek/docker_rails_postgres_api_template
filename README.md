@@ -33,6 +33,11 @@ For creating a new rspec model
     rails g rspec:model User
 ```
 
+DATABASE DEBUGGING
+```
+    https://cursos.alura.com.br/forum/topico-bug-erro-ao-subir-postgress-com-docker-247984
+```
+
 Things you may want to cover:
 
 * Ruby version
