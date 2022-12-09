@@ -6,6 +6,7 @@ class CreateStudents < ActiveRecord::Migration[6.1]
       t.string :email, :default => "N/A"
       t.integer :age
       t.string :sex
+      t.string :status
       t.uuid :profesor_id, :default => "N/A"
       t.uuid :salesman_id, :default => "N/A"
       t.string :marketing, :default => "N/A"

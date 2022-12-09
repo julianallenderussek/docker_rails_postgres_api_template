@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       resources :users
       resources :students
       resources :api_keys
+      resources :documents
     end 
   end
 end

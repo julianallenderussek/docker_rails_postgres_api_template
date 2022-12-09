@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_19_235117) do
+ActiveRecord::Schema.define(version: 2022_12_09_061534) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -26,12 +26,21 @@ ActiveRecord::Schema.define(version: 2022_11_19_235117) do
     t.index ["token"], name: "index_api_keys_on_token", unique: true
   end
 
+  create_table "documents", force: :cascade do |t|
+    t.string "attachment"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.string "description"
+  end
+
   create_table "students", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
     t.string "email", default: "N/A"
     t.integer "age"
     t.string "sex"
+    t.string "status"
     t.uuid "profesor_id"
     t.uuid "salesman_id"
     t.string "marketing", default: "N/A"

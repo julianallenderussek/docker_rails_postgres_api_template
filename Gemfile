@@ -9,8 +9,16 @@ gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 gem 'pg', '~> 1.1'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
+gem 'fog', require: 'fog/aws'
+gem "fog-core"
+
+gem 'carrierwave-aws'
 gem "carrierwave", "~> 1.0"
+gem "aws-sdk-s3", require: false
+gem 'mini_magick'
+gem "rmagick"
 gem "bcrypt", "~> 3.1.7"
+gem "figaro"
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
