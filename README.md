@@ -8,6 +8,15 @@ application up and running.
 docker-compose up
 ```
 
+Reset DB
+``` bash
+    ./reset.sh
+```
+
+``` bash
+bundle install
+```
+
 # Open rails console
 ```bash
     docker-compose exec api bash

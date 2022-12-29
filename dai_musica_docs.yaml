@@ -1,0 +1,85 @@
+_type: export
+__export_format: 4
+__export_date: 2022-12-29T01:28:16.710Z
+__export_source: insomnia.desktop.app:v2022.7.0
+resources:
+  - _id: req_3ce01c3ed2144cfbb92a7b1a948e29ae
+    parentId: fld_999e715e48fb4d599f47ff6cef29909d
+    modified: 1672277152127
+    created: 1672276198818
+    url: "{{host}}/users"
+    name: GET Users
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - id: pair_1bc65ab83b6841f8a53477587d253145
+        name: X-Platform
+        value: X-Platform
+        description: ""
+      - id: pair_5bccda72674e4244ac423c056cf8569c
+        name: accept
+        value: application/vnd.dai_musica.v1+json
+        description: ""
+    authentication: {}
+    metaSortKey: -1672276198818
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_999e715e48fb4d599f47ff6cef29909d
+    parentId: wrk_4d33108257f4400fab67f26ad09ed5cb
+    modified: 1672276196518
+    created: 1672276196518
+    name: Users
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1672276196518
+    _type: request_group
+  - _id: wrk_4d33108257f4400fab67f26ad09ed5cb
+    parentId: null
+    modified: 1672276011018
+    created: 1672276011018
+    name: Dai Musica
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: env_de123d49780fce630a69db61a1ae58b24e6cf7d2
+    parentId: wrk_4d33108257f4400fab67f26ad09ed5cb
+    modified: 1672276958663
+    created: 1672276011019
+    name: Base Environment
+    data:
+      host: http://localhost:3000
+      api_version: v1
+    dataPropertyOrder:
+      "&":
+        - host
+        - api_version
+    color: null
+    isPrivate: false
+    metaSortKey: 1672276011019
+    _type: environment
+  - _id: jar_de123d49780fce630a69db61a1ae58b24e6cf7d2
+    parentId: wrk_4d33108257f4400fab67f26ad09ed5cb
+    modified: 1672276011019
+    created: 1672276011019
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_c22e2b451b8b42cfa5d73a27903efdd4
+    parentId: wrk_4d33108257f4400fab67f26ad09ed5cb
+    modified: 1672276011018
+    created: 1672276011018
+    fileName: Dai Musica
+    contents: ""
+    contentType: yaml
+    _type: api_spec
